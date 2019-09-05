@@ -1,0 +1,42 @@
+-- 创建数据库
+create database emplay;
+
+-- 选中数据库
+use nihaobj;
+
+-- 创建表
+create table emplay(
+id int(4) primary key auto_increment,
+name varchar(50),
+age int(20) default '22',
+hiredate date,
+salary double(8,2),
+welfare double(8,2)
+);
+
+
+-- 插入记录
+insert into emplay values(null,'李雷',25,'2019-07-01',8000,2500);
+insert into emplay values(null,'大卫',30,'2019-08-09',9000,2000);
+insert into emplay values(null,'小马哥',50,'2019-05-06',7500,2800);
+insert into emplay values(null,'小八',26,'2019-04-08',7000,5000);
+insert into emplay values(null,'二郎',25,'2019-09-04',9000,3500);
+
+-- 修改 名字是小马哥的年龄和薪资
+update emplay set age=18,salary=50000 where name='小马哥';
+
+-- 删除名字为小八的记录
+delete from emplay where name='小八'; 
+
+-- 将表名修改
+alter table emplay rename emp;
+
+-- 查看所有表
+show tables;
+
+-- 查看一列信息
+select name from emp;
+select salary from emp;
+
+-- 查看两列信息
+select salary,name from emp;
