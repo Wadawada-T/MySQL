@@ -1,0 +1,12 @@
+卸载：
+  1.关闭数据库服务
+  2.控制面板中卸载MySQL
+  3.删除C:\Program Files\MySQL文件
+  4.删除C:\Program Data\MySQL文件         先将该隐藏文件设置为显示
+  
+安装
+  除next外需要修改的值
+  1.链接人数根据实际情况设置
+  2.编码设置为utf8
+  3.在环境变量中path设置bin目录
+  
